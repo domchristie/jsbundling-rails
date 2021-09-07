@@ -19,5 +19,10 @@ namespace :javascript do
     task webpack: "javascript:install:shared" do
       system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../../install/webpack/install.rb",  __dir__)}"
     end
+
+    desc "Install Tailwind"
+    task tailwind: "javascript:install:shared" do
+      system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../../install/tailwind/install.rb",  __dir__)}"
+    end
   end
 end

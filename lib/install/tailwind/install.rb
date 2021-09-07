@@ -1,0 +1,5 @@
+say "Create default package.json and install tailwindcss with config"
+copy_file "#{__dir__}/package.json", "package.json"
+copy_file "#{__dir__}/tailwind.config.js", "tailwind.config.js"
+copy_file "#{__dir__}/tailwind.css", "app/assets/stylesheets/tailwind.css"
+run "yarn add tailwindcss@latest postcss@latest autoprefixer@latest"
